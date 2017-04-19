@@ -34,16 +34,44 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        getCards();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+        //var listeningElement = parentElement.querySelector('.listening');
+        //var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        //listeningElement.setAttribute('style', 'display:none;');
+        //receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
     }
 };
+
+
+
+// Get Cards function
+
+function getCards() {
+
+  $.ajax({
+      url: "https://www.prettypragmatic.com/wp-json/wp/v2/pp-api",
+      dataType: 'json',
+      success: function(result){
+        console.log(result);
+
+        $.each( result, function(result_item) {
+          //console.log(result_item);
+          var cardTitle = result[result_item].title.rendered;
+          var cardImage = result[result_item].acf.card_image.sizes.large;
+          $(".app").append('<img src="'+cardImage+'" title="'+cardTitle+'" class="card" />');
+        });
+
+      },
+      error: function() {
+          alert("Oh shoot! Somethings gone wrong!");
+      }
+  });
+
+}

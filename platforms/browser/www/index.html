@@ -45,40 +45,25 @@
 </head>
 
 <body>
-    <div class="app">
-        <h1>PhoneGap</h1>
-        <div id="deviceready" class="blink">
-            <p class="event listening">Connecting to Device</p>
-            <p class="event received">Device is Ready</p>
-        </div>
+
+    <div id="header">
+      <h1><img src="img/planning-poker.png" alt="Planning Poker" /></h1>
     </div>
 
 
-    <script type="text/javascript">
-    $(document).ready(function(){
+    <div class="app">
 
-      $.ajax({
-          url: "https://www.prettypragmatic.com/wp-json/wp/v2/pp-api",
-          dataType: 'json',
-          success: function(result){
-            console.log(result);
+    </div>
 
-            $.each( result, function(result_item) {
-              //console.log(result_item);
-              var cardTitle = result[result_item].title.rendered;
-              var cardImage = result[result_item].acf.card_image.sizes.large;
-              $(".app").append(cardTitle);
-              $(".app").append("<img src='"+cardImage+"' width='200' />");
-            });
 
-          },
-          error: function() {
-              alert("Oh shoot! Somethings gone wrong!");
-          }
-      });
-
-    });
-    </script>
+    <div id="footer">
+      <a href="#"><img src="img/draw-card.png" /></a>
+      <a href="#"><img src="img/view-deck.png" /></a>
+      <a href="#"><img src="img/deal-friend.png" /></a>
+      <span>
+        &copy; 2017 PRETTY PRAGMATIC LTD
+      </span>
+    </div>
 
 
     <script type="text/javascript" src="cordova.js"></script>
