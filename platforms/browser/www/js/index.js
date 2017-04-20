@@ -46,6 +46,7 @@ var app = {
         //receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        //alert(id);
     }
 };
 
@@ -62,9 +63,12 @@ function getCards() {
         console.log(result);
 
         $.each( result, function(result_item) {
-          //console.log(result_item);
+          console.log(result_item);
+
           var cardTitle = result[result_item].title.rendered;
           var cardImage = result[result_item].acf.card_image.sizes.large;
+          var cardType = result[result_item].acf.card_type;
+
           $(".app").append('<img src="'+cardImage+'" title="'+cardTitle+'" class="card" />');
         });
 
