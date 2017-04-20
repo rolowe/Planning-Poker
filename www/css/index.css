@@ -45,7 +45,7 @@ body {
 
 
 .app {
-  border: solid 1px lime;
+  margin-top: 67px;
 }
 
 .event {
@@ -90,9 +90,9 @@ body {
 
 .card {
   display: block;
-  width: 80%;
+  width: 90%;
   margin: 0 auto 20px;
-  border: solid 1px #efefef;
+  /* border: solid 1px #efefef; */
 }
 
 
