@@ -8,7 +8,7 @@
     </feature>
     <name>Planning Poker</name>
     <description>
-        Planning Poker uses a deck of cards created by Pretty Pragmatic to stimulate your marketing and sales strategy. Pretty Pragmatic is a strategic marketing agency which believe in making sense sensational to achieve great results spanning from defining purpose to delivering profits.
+        Planning Poker uses a deck of cards created by Pretty Pragmatic to stimulate your marketing and sales strategy. Pretty Pragmatic is a strategic marketing agency that believes in making sense sensational to achieve great results spanning from defining purpose to delivering profits.
     </description>
     <author email="rob@robertlowe.co.uk" href="https://www.robertlowe.co.uk">
         Robert Lowe Digital
@@ -25,7 +25,6 @@
     <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#1d1d1d" />
     <preference name="StatusBarStyle" value="lightcontent" />
 </widget>

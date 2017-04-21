@@ -2,7 +2,7 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Planning Poker</name>
     <description>
-        Planning Poker uses a deck of cards created by Pretty Pragmatic to stimulate your marketing and sales strategy. Pretty Pragmatic is a strategic marketing agency which believe in making sense sensational to achieve great results spanning from defining purpose to delivering profits.
+        Planning Poker uses a deck of cards created by Pretty Pragmatic to stimulate your marketing and sales strategy. Pretty Pragmatic is a strategic marketing agency that believes in making sense sensational to achieve great results spanning from defining purpose to delivering profits.
     </description>
     <author email="rob@robertlowe.co.uk" href="https://www.robertlowe.co.uk">
         Robert Lowe Digital
@@ -13,9 +13,13 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
 
-    <preference name="StatusBarOverlaysWebView" value="false"/>
+    <!-- <preference name="StatusBarOverlaysWebView" value="false"/> -->
     <preference name="StatusBarBackgroundColor" value="#1d1d1d"/>
     <preference name="StatusBarStyle" value="lightcontent" />
+
+    <feature name="SocialSharing">
+        <param name="ios-package" value="SocialSharing" />
+    </feature>
 
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
