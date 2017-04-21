@@ -156,6 +156,7 @@ ul.card-content li {
 }
 
 .swipe {
+  display: none;
   width: 100%;
   position: fixed;
   top: 38%;
@@ -186,6 +187,7 @@ div#header {
   padding: 26px 2% 4%;
   background: url(../img/pp-logo-top.png) no-repeat 16px 25px #1d1d1d;
   background-size: 40px 35px;
+  z-index: 9999;
 }
 
 div#header h1 {
@@ -217,6 +219,7 @@ div#footer {
   bottom: 0;
   padding: 3% 2% 4%;
   background: #1d1d1d;
+  z-index: 9999;
 }
 
 div#footer a {

@@ -28,6 +28,7 @@
 
               if (pageID == "index") {
                 $(".card-container").fadeIn();
+                $(".swipe").fadeIn();
                 cardDeck('index');
                 $(".swipe").delay(2200).fadeOut();
               }
@@ -99,8 +100,8 @@ function setCardName(cardName) {
 
 function getCardItem() {
 
-  if (localStorage.getItem("card_name") == "") {
-    var card_name = "product"
+  if (localStorage.getItem("card_name") == null) {
+    var card_name = "culture";
   } else {
     var card_name = localStorage.getItem("card_name");
   }
