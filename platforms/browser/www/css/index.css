@@ -191,7 +191,7 @@ div#header {
 }
 
 div#header h1 {
-  width: 60%;
+  width: 62%;
   text-align: center;
   margin: 0 auto;
 }
@@ -199,14 +199,14 @@ div#header h1 img {
   max-width: 100%;
 }
 
-div#header .contact {
+div#header .info {
   position: absolute;
   right: 20px;
-  top: 29px;
+  top: 28px;
   width: 28px;
 }
 
-div#header .contact img {
+div#header .info img {
   width: 100%;
   height: auto;
 }

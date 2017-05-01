@@ -6,12 +6,12 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>Planning Poker</name>
+    <name>The Strat Pack</name>
     <description>
-        Planning Poker uses a deck of cards created by Pretty Pragmatic to stimulate your marketing and sales strategy. Pretty Pragmatic is a strategic marketing agency that believes in making sense sensational to achieve great results spanning from defining purpose to delivering profits.
+      The Strat Pack is a deck of cards for marketers to provoke new strategic thinking. Each card prompts a different way to think about your brand and business, allowing you to see all the opportunities available and bring a fresh twist to your marketing. At the base of each card is an example from a mainstream brand to provide a reference point. The Strat Pack is brought to you by Pretty Pragmatic, a strategic marketing agency that makes sense, sensational.
     </description>
-    <author email="rob@robertlowe.co.uk" href="https://www.robertlowe.co.uk">
-        Robert Lowe Digital
+    <author email="hello@prettypragmatic.com" href="https://www.prettypragmatic.com">
+        Pretty Pragmatic
     </author>
     <content src="index.html" />
     <access origin="*" />

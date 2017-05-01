@@ -45,6 +45,11 @@
                 return
               });
 
+              $('a.deal').on( 'click', function( event ) {
+                event.preventDefault();
+                window.plugins.socialsharing.share('Check out Planning Poker by Pretty Pragmatic: Link to the App store here');
+              });
+
             });
 
           }
@@ -57,13 +62,15 @@
 // ******* GET ALL CARDS *********
 // ******************************/
 function getCards(page) {
-  var ppAPI = "https://www.prettypragmatic.com/wp-json/wp/v2/pp-api?per_page=50";
-  var cachedData = localStorage.getItem("cardData");
 
   $(".loading").show();
 
+  var ppAPI = "https://www.prettypragmatic.com/wp-json/wp/v2/pp-api?per_page=50";
+  var cachedData = localStorage.getItem("cardData");
+
   // Ajax get
   if (cachedData == null) {
+
         $.ajax({
             url: ppAPI,
             dataType: 'json',
