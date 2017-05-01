@@ -17,9 +17,7 @@
     <preference name="StatusBarBackgroundColor" value="#1d1d1d"/>
     <preference name="StatusBarStyle" value="lightcontent" />
 
-    <feature name="SocialSharing">
-        <param name="ios-package" value="SocialSharing" />
-    </feature>
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" />
 
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
