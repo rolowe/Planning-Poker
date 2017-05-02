@@ -9,6 +9,10 @@
     </author>
     <content src="index.html" />
 
+    <config-file platform="ios" parent="NSCameraUsageDescription" overwrite="true">
+   		<string>This app does not use the camera.</string>
+	</config-file>
+
     <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
