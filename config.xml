@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.helloworld" version="4.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.phonegap.helloworld" version="4.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>The Strat Pack</name>
     <description>
       The Strat Pack is a deck of cards for marketers to provoke new strategic thinking. Each card prompts a different way to think about your brand and business, allowing you to see all the opportunities available and bring a fresh twist to your marketing. At the base of each card is an example from a mainstream brand to provide a reference point. The Strat Pack is brought to you by Pretty Pragmatic, a strategic marketing agency that makes sense, sensational.

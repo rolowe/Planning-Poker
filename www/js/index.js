@@ -30,7 +30,7 @@
                 $(".card-container").fadeIn();
                 $(".swipe").fadeIn();
                 cardDeck('index');
-                $(".swipe").delay(2200).fadeOut();
+                $(".swipe").delay(2800).fadeOut();
               }
               if (pageID == "card") {
                 getCardItem();
@@ -47,7 +47,7 @@
 
               $('a.deal').on( 'click', function( event ) {
                 event.preventDefault();
-                window.plugins.socialsharing.share('Check out Planning Poker by Pretty Pragmatic: Link to the App store here');
+                window.plugins.socialsharing.share('Check out The Strat Pack by Pretty Pragmatic. http://bit.ly/TheStratPack');
               });
 
             });
