@@ -185,7 +185,7 @@ div#header {
   position: fixed;
   top: 0;
   padding: 26px 2% 4%;
-  background: url(../img/pp-logo-top.png) no-repeat 16px 25px #1d1d1d;
+  background: no-repeat 16px 25px #1d1d1d;
   background-size: 40px 35px;
   z-index: 9999;
 }
@@ -210,6 +210,19 @@ div#header .info img {
   width: 100%;
   height: auto;
 }
+
+a.logo {
+  position: absolute;
+  top: 25px;
+  left: 16px;
+  width: 40px;
+}
+a.logo img {
+  width: 100%;
+  height: auto;
+}
+
+
 
 
 div#footer {

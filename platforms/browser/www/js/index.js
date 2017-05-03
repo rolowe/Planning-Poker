@@ -169,7 +169,7 @@ function cardDeck(page) {
     }
     if (page == "card") {
       var $el = $( '#card-item' );
-    }
+    } 
     var baraja = $el.baraja();
 
     // Binding swipe event to left and right buttons
@@ -179,7 +179,6 @@ function cardDeck(page) {
     $("li").on("swipeleft", function() {
         baraja.previous();
     });
-
 
     // Single card new card button
     $('#new-card').on( 'click', function( event ) {
