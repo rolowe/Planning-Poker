@@ -109,32 +109,27 @@ function getCardItem() {
 
   if (localStorage.getItem("card_name") == null) {
     var card_name = "culture";
+    var cardId = convertToSlug(card_name);
   } else {
     var card_name = localStorage.getItem("card_name");
+    var cardId = convertToSlug(card_name);
   }
 
-  $(".loading").show();
+      $(".loading").show();
 
-  $.ajax({
-      url: "https://www.prettypragmatic.com/wp-json/wp/v2/pp-api?search="+card_name+"&per_page=1",
-      dataType: 'json',
-      success: function(result) {
-
-        $(".loading").hide();
-
-        var cardTitle = result[0].slug;
-        var cardImage = result[0].acf.card_image.sizes.large;
-        $("#card-item").prepend('<li><img src="'+cardImage+'" title="'+cardTitle+'" rel="'+cardTitle+'" class="card" /></li>');
-        $(".card-container").fadeIn();
-
-        getCards('card');
-        cardDeck('card');
-
-      },
-      error: function() {
-          alert("Ooops! Somethings gone wrong!");
+      getCards('card');
+      
+      if (cardId != "product") {
+        var nextCards = $('li#' + cardId).nextAll( "li" );
+        $('li#' + cardId).insertBefore("ul#card-item li:first");
+        $(nextCards).insertAfter("ul#card-item li:first");
       }
-  });
+
+
+      cardDeck('card');
+
+      $(".card-container").fadeIn();
+
 }
 
 
@@ -146,16 +141,31 @@ function addCards(result, page) {
     var cardTitle = result[result_item].title.rendered;
     var cardImage = result[result_item].acf.card_image.sizes.large;
     var cardType = result[result_item].acf.card_type;
+    var cardId = convertToSlug(cardTitle);
 
+  
     if (page == "deck") {
-      $(".card-deck").append('<li><a href="card.html"><img src="'+cardImage+'" title="'+cardTitle+'" rel="'+cardTitle+'" class="card" /></a></li>');
+      $(".card-deck").append('<li id="'+cardId+'"><a href="card.html"><img src="'+cardImage+'" title="'+cardTitle+'" rel="'+cardTitle+'" class="card" /></a></li>');
     }
     if (page == "card") {
-      $("#card-item").append('<li><img src="'+cardImage+'" title="'+cardTitle+'" rel="'+cardTitle+'" class="card" /></li>');
+      $("#card-item").append('<li id="'+cardId+'"><img src="'+cardImage+'" title="'+cardTitle+'" rel="'+cardTitle+'" class="card" /></li>');
     }
 
   });
 }
+
+
+// /******************************
+// ******* CONVERT TO SLUG *******
+// ******************************/
+function convertToSlug(Text) {
+  return Text
+      .toLowerCase()
+      .replace(/ /g,'-')
+      .replace(/[^\w-]+/g,'')
+      ;
+}
+
 
 
 
