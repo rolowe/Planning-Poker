@@ -18,8 +18,8 @@
     <preference name="StatusBarBackgroundColor" value="#1d1d1d"/>
     <preference name="StatusBarStyle" value="lightcontent" />
 
-    <!-- <plugin name="cordova-plugin-x-socialsharing" source="npm" /> -->
-    <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.16" />
+    <plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <!-- <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.16" /> -->
 
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
